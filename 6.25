@@ -1,0 +1,24 @@
+package com.company;
+
+import java.util.Scanner;
+
+/**
+ * Main method
+ */
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(convertMillis(5500));
+    }
+
+    public static String convertMillis(long millis) {
+        long hours, minutes, seconds;
+        hours = ((millis / (1000 * 60 * 60)) % 24);
+        minutes = ((millis / (1000 * 60)) % 60);
+        seconds = (millis / 1000) % 60;
+
+        String timeString = String.format("%02d:%02d:%02d", hours, minutes, seconds);
+
+        return timeString;
+    }
+}
+
