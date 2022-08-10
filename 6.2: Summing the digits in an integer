@@ -1,0 +1,24 @@
+package com.company;
+
+import java.util.Scanner;
+
+/**
+ * Main method
+ */
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(sumDigits(234));
+    }
+
+    public static int sumDigits(long n) {
+        int temp = (int) Math.abs(n);
+        int sum = 0;
+
+        while (temp != 0) {
+            sum += (temp % 10);
+            temp = temp / 10;
+        }
+        return sum;
+    }
+}
+
